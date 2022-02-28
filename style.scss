@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+$jaune : #F2D43D;
+$vert: #00FFCD;
+$blue: #61d7ec;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    margin: auto;
+}
+
+.everything {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin:auto;
+}
+
+.heading {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto Slab', serif;
+    margin: 30px 10px 25px 10px;
+    letter-spacing: 0.1rem;
+    img {
+        height:35px;
+    }
+}
+
+.today-update {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px 25px 10px;
+    img {
+        height:50px;
+    }
+    .text-update {
+        p {
+            padding-top: 3px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        h3 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.3rem
+        }
+    }
+}
+
+.task-categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 15px 10px;
+    font: {
+        family: 'Arvo', serif;
+        size: 1.17rem
+    };
+    .category{
+        padding:15px;
+        border-radius:  33% 67% 64% 36% / 46% 50% 50% 54% ;
+        &:nth-of-type(1) {
+            color: #fff;
+            background-color: #000
+        }
+    }
+}
+
+span.material-icons { vertical-align: middle !important; }
+
+.writting-icon img {
+    height:25px;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+}
+
+
+.task-list {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+    .task {
+        padding: 15px 10px 10px 15px;
+        border-radius: 15px;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        .tag {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            span:last-child {
+                position: absolute;
+                text-align: center;
+                font-size: 1.7rem;
+                right: 15px;
+                top: 22px
+            }
+            span:nth-of-type(1) {
+                padding: 3px 10px 3px 10px;
+                border-radius: 15px;
+                border: 1px solid rgb(29, 25, 25);
+            }
+            span:nth-of-type(2) {
+                padding: 3px 10px 3px 10px;
+                border-radius: 15px;
+                border: 1px solid rgb(29, 25, 25);
+            }
+        }
+    }
+    .task-name {
+        font-size: 1rem; 
+        font-family: 'Roboto Slab', serif;
+        padding: 15px 0px 15px 2px;
+    }
+    .task-date {
+        p {
+            span {
+                padding-right: 6px;
+            }
+        }
+    }
+    .task-hour {
+        p {
+            span {
+                padding-right: 6px;
+            }
+        }
+    }
+    .task:nth-of-type(4n) {
+        background-color: rgb(192, 83, 235);
+    }
+    .task:nth-of-type(4n-1){
+        background-color: $jaune
+    }
+    .task:nth-of-type(4n-2){
+        background-color: $blue
+    }
+    .task:nth-of-type(4n-3) {
+        background-color: $vert !important;
+
+    }
+}
+
+.checkbox-round {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: none;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid rgb(17, 17, 17);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    right: 17px;
+    bottom: 17px;
+    outline: none ;
+}
+
+.checkbox-round:checked {
+    background-color: orange !important;
+    outline: none ;
+}
